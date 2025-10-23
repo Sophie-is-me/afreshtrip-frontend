@@ -6,7 +6,7 @@
   <title>Afreshtrip - Blog</title>
   
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../Css/blog.css"/>
+  <link rel="stylesheet" href="../Css/blog-6.css"/>
 </head>
 <body>
   <!-- Header -->
@@ -33,27 +33,11 @@
             <img src="../assets/4.png" alt="Arrow" class="arrow-icon">
           </div>
         </div>
-
-        
-          <!-- 新增的按钮 -->
-          <div class="toolbar-btn-group">
-            <button class="toolbar-btn">
-              <img src="../assets/add.png" alt="Add" class="toolbar-icon">
-            </button>
-            <button class="toolbar-btn">
-              <img src="../assets/heart.png" alt="Like" class="toolbar-icon">
-            </button>
-            <button class="toolbar-btn">
-              <img src="../assets/bookmark.png" alt="Save" class="toolbar-icon">
-            </button>
-          </div>
       
-          <!-- 用户图标 -->
-    <button class="user-icon-btn">
-      <img src="../assets/avater.png" alt="User" class="user-icon">
-  </button>
-      
-
+        <!-- 退出按钮 -->
+      <button id="logout-btn" class="logout-btn">
+        <img src="../assets/exit.png" alt="Logout" class="logout-icon">
+      </button>
     </div>
 </div>
       
@@ -63,45 +47,11 @@
   <!-- Main Content -->
   <main class="main-content">
     <section class="blog-container">
-      <!-- 左侧国家介绍卡片 -->
-      <div class="country-card">
-        <h2 class="country-title">France</h2>
-        <p class="country-description">
-          A self-drive trip in France lets you explore wine country, medieval towns, and seaside roads at your own pace.
-          Drive through Provence to see lavender fields and hilltop villages, follow the Normandy coast past historic landmarks,
-          or wind through the Loire Valley to visit centuries-old châteaux.
-        </p>
+      
 
-        <div class="dotted-line"></div>
-
-        <div class="tour-grid">
-          <div class="tour-card">
-            <img src="../assets/image-1.png" alt="Provence Tour" class="tour-img" />
-            <h3>Self-Drive France: Provence & the French Riviera - 10 Days</h3>
-            <p>
-              Take a 10-day road trip through the South of France, from Nice to Aix-en-Provence.
-              Drive past coastal towns, hilltop villages, and rolling countryside. Along the way,
-              create perfume in Grasse, tour Châteauneuf-du-Pape wineries, and explore Luberon villages by e-bike.
-            </p>
-            <button class="btn btn-dark">Discover France</button>
-          </div>
-
-          <div class="tour-card">
-            <img src="../assets/image-1.png" alt="Western France Tour" class="tour-img" />
-            <h3>Road Trip through Western France: Paris, Normandy, Loire Valley, & Bordeaux - 12 Days</h3>
-            <p>
-              Spend 12 days exploring western France, from Paris to Bordeaux.
-              Visit Versailles, see Normandy’s beaches, and end in Bordeaux, where wine and world-class cuisine wait for you.
-            </p>
-            <button class="btn btn-dark">Discover France</button>
-          </div>
-        </div>
-
-        <div class="dotted-line"></div>
-      </div>
-
-      <!-- 右侧 Testimonials & Gallery -->
+      <!--  Testimonials & Gallery -->
 <div class="testimonials-section">
+
     <h2 class="section-title">Testimonials & Gallery</h2>
   
     <!-- 卡片 1 -->
@@ -190,15 +140,32 @@
         <a href="#" class="read-link">Read</a>
       </div>
     </div>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <button class="page-btn">1</button>
+    <button class="page-btn">2</button>
+    <button class="page-btn">3</button>
+    <button class="page-btn">4</button>
+    <button class="page-btn">5</button>
   </div>
-  
+
+  <!-- Back Button -->
+  <div class="back-btn-container">
+    <button class="back-btn">Back</button>
+  </div>
+
+  </div>
 
     </section>
 
-  
-  
+ 
 
   </main>
+
+
+
+
 
   <!-- Footer -->
   <footer class="footer">
@@ -231,11 +198,6 @@
       </div>
     
     
-
-  <!-- ✅ 引入 blog.js（登录状态检测 + 登出功能） -->
-  <!-- <script src="../js/blog.js"></script> -->
-
-
   
 </body>
 </html>

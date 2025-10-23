@@ -94,6 +94,25 @@ body {
   justify-content: flex-end; /* 确保靠右对齐 */
 }
 
+.icon-buttons {
+  display: flex;
+  gap: 3rem; /* Adjust gap between icon buttons */
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-btn img {
+  width: 40px;  /* Set appropriate size for icons */
+  height: 40px;
+}
+
 /* Language Dropdown */
 .language-dropdown {
   position: relative;
@@ -197,18 +216,7 @@ body {
   object-fit: contain;
 }
 
-/* Navigation Links */
-.nav-link {
-  color: white;
-  text-decoration: none;
-  font-size: 1.35rem;
-  transition: all 0.3s ease;
-}
 
-.nav-link:hover {
-  text-decoration: underline;
-  color: #e0f7ff;
-}
 
 
 
