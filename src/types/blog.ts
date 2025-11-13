@@ -1,0 +1,65 @@
+export interface Author {
+  id: string;
+  name: string;
+  avatar: string;
+  bio?: string;
+  socialLinks?: {
+    twitter?: string;
+    linkedin?: string;
+  };
+}
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  content: string; // Full content for details view
+  excerpt?: string; // Short summary for listing view
+  images: string[]; // Array of image URLs
+  author: Author;
+  date: string; // Publication date (ISO string)
+  views: number;
+  likes: number;
+  isLiked?: boolean; // User-specific like status
+  isSaved?: boolean; // User-specific save status
+  category: string;
+  tags?: string[]; // Optional tags for filtering/searching
+  slug: string; // URL-friendly identifier
+  isPublished: boolean;
+  createdAt: string; // Creation timestamp
+  updatedAt: string; // Last update timestamp
+}
+
+// Type for blog post listing (subset of fields for performance)
+export interface BlogPostSummary {
+  id: string;
+  title: string;
+  excerpt: string;
+  images: string[]; // Usually just the first image
+  author: Author;
+  date: string;
+  views: number;
+  likes: number;
+  category: string;
+  slug: string;
+}
+
+// Type for blog post filters
+export interface BlogFilters {
+  category?: string;
+  authorId?: string;
+  tags?: string[];
+  isPublished?: boolean;
+  dateFrom?: string;
+  dateTo?: string;
+}
+
+// Type for blog post sorting options
+export type BlogSortOption = 'date' | 'views' | 'likes' | 'title';
+
+// Type for blog post statistics
+export interface BlogStats {
+  totalPosts: number;
+  totalViews: number;
+  totalLikes: number;
+  postsByCategory: Record<string, number>;
+}
