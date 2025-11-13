@@ -191,10 +191,10 @@ const Blog: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header showToolbar showNavLinks={false} />
+      <Header showNavLinks={false} />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-teal-700 to-teal-900 text-white py-16">
+      <section className="bg-linear-to-r from-teal-700 to-teal-900 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('blog.title')}</h1>
@@ -207,10 +207,10 @@ const Blog: React.FC = () => {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder={t('blog.searchPlaceholder')}
-                className="w-full px-4 py-3 pr-10 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-teal-300"
+                className="w-full px-4 py-3 pr-10 rounded-lg bg-white text-gray-800 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-300 focus:border-teal-300 shadow-lg"
               />
               <div className="absolute inset-y-0 right-0 flex items-center pr-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </div>
@@ -288,7 +288,6 @@ const Blog: React.FC = () => {
                     date={post.date}
                     userAvatar={post.author.avatar}
                     userName={post.author.name}
-                    showReadLink={true}
                     readLink={`/blog/${post.id}`}
                   />
                 ))}

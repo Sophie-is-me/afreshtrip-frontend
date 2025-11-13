@@ -1,0 +1,18 @@
+{
+  "editProfile": "Edit Profile Informations",
+  "username": "Username",
+  "email": "Email",
+  "mobile": "Mobile Number",
+  "dob": "Date of Birth",
+  "password": "Password",
+  "confirmPassword": "Confirmed Password",
+  "gender": "Gender",
+  "male": "Male",
+  "female": "Female",
+  "update": "Update",
+  "usernamePlaceholder": "Your username",
+  "mobilePlaceholder": "Your mobile number",
+  "passwordPlaceholder": "Your password",
+  "confirmPasswordPlaceholder": "Confirm your password",
+  "contentComingSoon": "Content for {{tab}} will be implemented here."
+}

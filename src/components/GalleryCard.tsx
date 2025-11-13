@@ -12,16 +12,13 @@ interface GalleryCardProps {
   date: string;
   userAvatar: string;
   userName: string;
-  userId?: string;
   likes?: number;
   isLiked?: boolean;
   isSaved?: boolean;
-  showReadLink?: boolean;
   readLink?: string;
   onLike?: (id: string) => void;
   onSave?: (id: string) => void;
   onShare?: (id: string) => void;
-  onCardClick?: (id: string) => void;
   loading?: boolean;
 }
 
@@ -35,16 +32,13 @@ const GalleryCard: React.FC<GalleryCardProps> = ({
   date,
   userAvatar,
   userName,
-  userId,
   likes = 0,
   isLiked = false,
   isSaved = false,
-  showReadLink = false,
   readLink = '#',
   onLike,
   onSave,
   onShare,
-  onCardClick,
   loading = false,
 }) => {
   const [liked, setLiked] = useState(isLiked);
@@ -94,12 +88,6 @@ const GalleryCard: React.FC<GalleryCardProps> = ({
     }
   };
 
-  const handleCardClick = () => {
-    if (onCardClick) {
-      onCardClick(id);
-    }
-  };
-
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
@@ -144,14 +132,14 @@ const GalleryCard: React.FC<GalleryCardProps> = ({
   }
 
   return (
-    <article 
-      className="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer"
-      onClick={handleCardClick}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => e.key === 'Enter' && handleCardClick()}
-      aria-label={`View details for ${title} by ${userName}`}
+    <Link
+      to={readLink}
+      className="block h-full"
     >
+      <article
+        className="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer flex flex-col h-full"
+        aria-label={`View details for ${title} by ${userName}`}
+      >
       <div className="relative h-48 overflow-hidden">
         {!imageLoaded && !imageError && (
           <div className="absolute inset-0 bg-gray-200 animate-pulse"></div>
@@ -177,7 +165,7 @@ const GalleryCard: React.FC<GalleryCardProps> = ({
         </div>
       </div>
 
-      <div className="p-4">
+      <div className="p-4 grow">
         <div className="flex justify-between items-start mb-4">
           <div className="text-sm text-gray-500">
             <div className="flex items-center gap-1">
@@ -226,39 +214,20 @@ const GalleryCard: React.FC<GalleryCardProps> = ({
         </div>
 
         <div className="flex items-center gap-3 mb-3">
-          <Link 
-            to={`/user/${userId}`} 
-            onClick={(e) => e.stopPropagation()}
-            className="flex items-center gap-3 group"
-          >
-            <div className="relative">
-              <img 
-                src={userAvatar} 
-                alt={userName} 
-                className="w-8 h-8 rounded-full object-cover border-2 border-transparent group-hover:border-teal-500 transition-colors" 
-              />
-              <div className="absolute inset-0 rounded-full bg-teal-500 opacity-0 group-hover:opacity-20 transition-opacity"></div>
-            </div>
-            <span className="font-medium text-gray-800 group-hover:text-teal-600 transition-colors">{userName}</span>
-          </Link>
+          <div className="flex items-center gap-3">
+            <img
+              src={userAvatar}
+              alt={userName}
+              className="w-8 h-8 rounded-full object-cover"
+            />
+            <span className="font-medium text-gray-800">{userName}</span>
+          </div>
         </div>
 
         <h3 className="text-lg font-semibold mb-2 text-gray-800 line-clamp-1">{title}</h3>
         <p className="text-gray-600 text-sm mb-3 line-clamp-2">{description}</p>
 
-        <div className="flex items-center justify-between">
-          {showReadLink && (
-            <Link 
-              to={readLink} 
-              onClick={(e) => e.stopPropagation()}
-              className="text-teal-600 hover:text-teal-700 font-medium text-sm flex items-center gap-1 transition-colors"
-            >
-              {t('galleryCard.readMore')}
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          )}
+        <div className="flex items-center justify-end">
           {likesCount > 0 && (
             <div className="flex items-center gap-1 text-sm text-gray-500">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-red-500" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
@@ -270,6 +239,7 @@ const GalleryCard: React.FC<GalleryCardProps> = ({
         </div>
       </div>
     </article>
+    </Link>
   );
 };
 

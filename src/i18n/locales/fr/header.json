@@ -1,0 +1,19 @@
+{
+  "yourLocation": "Votre emplacement",
+  "home": "Accueil",
+  "blog": "Blog",
+  "payment": "Paiement",
+  "support": "Support",
+  "add": "Ajouter",
+  "like": "Aimer",
+  "save": "Sauvegarder",
+  "language": "Langue",
+  "logoutError": "Échec de la déconnexion. Veuillez réessayer.",
+  "loggingOut": "Déconnexion en cours...",
+  "logout": "Se déconnecter",
+  "signIn": "Se connecter",
+  "signUp": "S'inscrire",
+  "english": "English",
+  "french": "Français",
+  "spanish": "Español"
+}

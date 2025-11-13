@@ -1,0 +1,19 @@
+{
+  "yourLocation": "Your Location",
+  "home": "Home",
+  "blog": "Blog",
+  "payment": "Payment",
+  "support": "Support",
+  "add": "Add",
+  "like": "Like",
+  "save": "Save",
+  "language": "Language",
+  "logoutError": "Logout failed. Please try again.",
+  "loggingOut": "Logging out...",
+  "logout": "Logout",
+  "signIn": "Sign In",
+  "signUp": "Sign Up",
+  "english": "English",
+  "french": "Français",
+  "spanish": "Español"
+}

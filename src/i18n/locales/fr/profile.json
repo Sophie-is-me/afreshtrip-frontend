@@ -1,0 +1,18 @@
+{
+  "editProfile": "Modifier les informations du profil",
+  "username": "Nom d'utilisateur",
+  "email": "Email",
+  "mobile": "Numéro de téléphone",
+  "dob": "Date de naissance",
+  "password": "Mot de passe",
+  "confirmPassword": "Confirmer le mot de passe",
+  "gender": "Genre",
+  "male": "Homme",
+  "female": "Femme",
+  "update": "Mettre à jour",
+  "usernamePlaceholder": "Votre nom d'utilisateur",
+  "mobilePlaceholder": "Votre numéro de téléphone",
+  "passwordPlaceholder": "Votre mot de passe",
+  "confirmPasswordPlaceholder": "Confirmer votre mot de passe",
+  "contentComingSoon": "Le contenu pour {{tab}} sera bientôt disponible."
+}

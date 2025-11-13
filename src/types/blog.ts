@@ -63,3 +63,16 @@ export interface BlogStats {
   totalLikes: number;
   postsByCategory: Record<string, number>;
 }
+
+export interface Comment {
+  id: string;
+  author: {
+    name: string;
+    avatar: string;
+  };
+  content: string;
+  date: string;
+  likes: number;
+  isLiked: boolean;
+  replies?: Comment[];
+}

@@ -1,0 +1,19 @@
+{
+  "yourLocation": "Tu ubicación",
+  "home": "Inicio",
+  "blog": "Blog",
+  "payment": "Pago",
+  "support": "Soporte",
+  "add": "Agregar",
+  "like": "Me gusta",
+  "save": "Guardar",
+  "language": "Idioma",
+  "logoutError": "Error al cerrar sesión. Por favor, inténtalo de nuevo.",
+  "loggingOut": "Cerrando sesión...",
+  "logout": "Cerrar sesión",
+  "signIn": "Iniciar sesión",
+  "signUp": "Registrarse",
+  "english": "English",
+  "french": "Français",
+  "spanish": "Español"
+}

@@ -1,0 +1,8 @@
+{
+  "myTrips": "Mes voyages",
+  "date": "Date",
+  "city": "Ville",
+  "stops": "Arrêts",
+  "noTrips": "Aucun voyage trouvé.",
+  "contentComingSoon": "Le contenu pour {{tab}} sera bientôt disponible."
+}

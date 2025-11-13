@@ -1,0 +1,8 @@
+{
+  "myTrips": "My trips",
+  "date": "Date",
+  "city": "City",
+  "stops": "Stops",
+  "noTrips": "No trips found.",
+  "contentComingSoon": "Content for {{tab}} will be implemented here."
+}
